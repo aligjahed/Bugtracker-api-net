@@ -4,7 +4,8 @@ namespace Bugtracker_api_net.Entities;
 
 public class Employee : UserBase
 {
-    public virtual Company Company { get; set; } = new Company();
-    public virtual List<Issue> Issues { get; set; } = new List<Issue>();
-    public virtual List<IssueReport> IssueReports { get; set; } = new List<IssueReport>();
+    public bool IsActivated { get; set; } = false;
+    public virtual Company Company { get; set; } = new();
+    public virtual List<Issue> Issues { get; set; } = new();
+    public virtual List<Report> Reports { get; set; } = new();
 }
