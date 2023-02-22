@@ -9,5 +9,6 @@ public class Company : BaseEntity
     public virtual List<Employee> Employees { get; set; } = new();
     public virtual List<Project> Projects { get; set; } = new();
     public virtual List<Issue> Issues { get; set; } = new();
-    public virtual List<Reviews> Reviews { get; set; } = new();
+    public virtual List<Report> Reports { get; set; } = new();
+    public virtual List<Review> Reviews { get; set; } = new();
 }
