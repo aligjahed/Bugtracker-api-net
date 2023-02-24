@@ -9,5 +9,6 @@ public class Report : BaseEntity
     public virtual Company Company { get; set; } = new();
     public virtual Employee Employee { get; set; } = new();
     public virtual Project Project { get; set; } = new();
+    public Guid IssueID { get; set; }
     public virtual Issue Issue { get; set; } = new();
 }
