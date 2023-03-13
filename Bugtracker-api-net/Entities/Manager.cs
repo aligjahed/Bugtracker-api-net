@@ -5,5 +5,5 @@ namespace Bugtracker_api_net.Entities;
 public class Manager : UserBase
 {
     public Guid CompanyID { get; set; }
-    public virtual Company Company { get; set; } = new();
+    public virtual Company Company { get; set; }
 }

@@ -9,6 +9,6 @@ public class Review : BaseEntity
     public string ClientEmail { get; set; } = string.Empty;
     public int Rate { get; set; } = 0;
     public string Description { get; set; } = string.Empty;
-    public virtual Company Company { get; set; } = new();
-    public virtual Project Project { get; set; } = new();
+    public virtual Company Company { get; set; } 
+    public virtual Project Project { get; set; } 
 }

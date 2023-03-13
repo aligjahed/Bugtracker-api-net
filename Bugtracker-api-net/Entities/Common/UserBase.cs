@@ -11,5 +11,5 @@ public class UserBase : BaseEntity
     public string Role { get; set; } = string.Empty;
     public bool IsEmailConfirmed { get; set; } = false;
     public bool IsLockout { get; set; } = false;
-    public virtual List<Notification> Notifications { get; set; } = new();
+    public virtual List<Notification> Notifications { get; set; }
 }

@@ -5,10 +5,10 @@ namespace Bugtracker_api_net.Entities;
 public class Company : BaseEntity
 {
     public string Name { get; set; } = string.Empty;
-    public virtual Manager Manager { get; set; } = new();
-    public virtual List<Employee> Employees { get; set; } = new();
-    public virtual List<Project> Projects { get; set; } = new();
-    public virtual List<Issue> Issues { get; set; } = new();
-    public virtual List<Report> Reports { get; set; } = new();
-    public virtual List<Review> Reviews { get; set; } = new();
+    public virtual Manager Manager { get; set; }
+    public virtual List<Employee> Employees { get; set; } 
+    public virtual List<Project> Projects { get; set; } 
+    public virtual List<Issue> Issues { get; set; } 
+    public virtual List<Report> Reports { get; set; } 
+    public virtual List<Review> Reviews { get; set; } 
 }
