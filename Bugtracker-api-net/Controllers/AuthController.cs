@@ -1,5 +1,6 @@
 using Bugtracker_api_net.Contracts;
 using Bugtracker_api_net.Repositories.Auth.Commands;
+using Bugtracker_api_net.Repositories.Auth.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,5 +26,16 @@ public class AuthController : Controller
         var response = await _mediatr.Send(new RegisterManagerCommand(){Contract = request});
 
         return Ok(response.Token);
-    }   
+    }
+
+
+    [MapToApiVersion("1.0")]
+    [Route("login/email")]
+    [HttpPost]
+    public async Task<IActionResult> LoginWithEmail([FromBody] LoginWithEmailContract request)
+    {
+        var response = await _mediatr.Send(new LoginWithEmailQuery(){LoginWithEmailContract = request});
+
+        return Ok(response.Token);
+    }
 }

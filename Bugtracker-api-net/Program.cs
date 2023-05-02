@@ -20,7 +20,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 
-app.UseExceptionHandler("/error");
+app.UseExceptionHandler("/api/v1/error");
 
 // apply migrations at runtime
 using (var scope = app.Services.CreateScope())

@@ -85,6 +85,6 @@ public class RegisterManagerCommandHandler : IRequestHandler<RegisterManagerComm
 
         var token = _jwtTokenGenerator.GenerateToken(manager.Id, manager.FirstName, manager.LastName, manager.Role);
 
-        return new RegisterManagerResponse() { Token = token };
+        return new RegisterManagerResponse(Token: token);
     }
 }

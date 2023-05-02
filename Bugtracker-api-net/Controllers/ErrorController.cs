@@ -5,8 +5,13 @@ using Microsoft.Net.Http.Headers;
 
 namespace Bugtracker_api_net.Controllers;
 
+[ApiController]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/")]
 public class ErrorController : Controller
 {
+    [Route("error")]
+    [MapToApiVersion("1.0")]
     public IActionResult Index()
     {
         var exception = HttpContext.Features.Get<IExceptionHandlerFeature>().Error;
